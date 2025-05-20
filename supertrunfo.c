@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 int main() {
+   
     // Carta 1
+   
     float populacao = 11.0000;
     float area = 240.000;
     float pib = 200.0000;
@@ -9,7 +11,7 @@ int main() {
     float densidade_populacional = area / populacao;
     float PIB_per_capita = pib / populacao;
     float inverso_densidade = 1.0 / densidade_populacional;
-
+    //calculo do super poder
     float super_poder = populacao + area + pib + pontos_turisticos + PIB_per_capita + inverso_densidade;
 
     printf("Carta 1\n");
@@ -34,7 +36,7 @@ int main() {
     float densidade_populacional_ = area_ / populacao_;
     float PIB_per_capita_ = pib_ / populacao_;
     float inverso__densidade = 1.0 / densidade_populacional_; // CORRIGIDO AQUI
-
+    //calculo do super poder
     float super__poder = populacao_ + area_ + pib_ + pontos__turisticos + PIB_per_capita_ + inverso__densidade;
 
     printf("Carta 2\n");
@@ -51,22 +53,34 @@ int main() {
 
     printf("===========================\n\n");
 
-    // Comparações com nomes modifcados para evitar conflito
-    int v_populacao = populacao > populacao_;
-    int v_area = area > area_;
-    int v_pib = pib > pib_;
-    int v_pontos_turisticos = pontos_turisticos > pontos__turisticos;
-    int v_densidade = densidade_populacional < densidade_populacional_;  
-    int v_pib_per_capita = PIB_per_capita > PIB_per_capita_;
-    int v_super_poder = super_poder > super__poder;
-
-    printf("População: Carta 1 venceu (%d)\n", v_populacao);
-    printf("Área: Carta 1 venceu (%d)\n", v_area);
-    printf("PIB: Carta 1 venceu (%d)\n", v_pib);
-    printf("Pontos Turísticos: Carta 1 venceu (%d)\n", v_pontos_turisticos);
-    printf("Densidade Populacional: Carta 1 venceu (%d)\n", v_densidade);
-    printf("PIB per Capita: Carta 1 venceu (%d)\n", v_pib_per_capita);
-    printf("Super Poder: Carta 1 venceu (%d)\n", v_super_poder);
-
-    return 0;
+    // Comparação de 3 atributos
+    
+    printf("Comparaçao de cartas: populaçao\n");
+    printf("carta1: São paulo:11.0000\n");
+    printf("carta2: Rio de janeiro:80.0000\n");
+    if(populacao > populacao_){
+         printf("carta1 venceu\n");
+        }else{
+         printf("carta2 venceu\n");   
+        }
+    printf("Comparaçao de cartas: area\n");
+    printf("carta1: São paulo:240.000km\n");
+    printf("carta2: Rio de janeiro:430.000km\n");
+    if(area > area_){
+         printf("carta1 venceu\n");
+        }else{
+         printf("carta2 venceu\n");   
+        }
+    printf("Comparaçao de cartas: pontos turisticos\n");
+    printf("carta1: São paulo:4.000\n");
+    printf("carta2: Rio de janeiro:2.000\n");
+    if(pontos_turisticos > pontos__turisticos ){
+         printf("carta1 venceu\n");
+        }else{
+         printf("carta2 venceu\n");   
+        }
+   
+   
+   
+        return 0;
 }
